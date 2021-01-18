@@ -1,0 +1,11 @@
+step1: sort all files using external sort using id then date
+
+step2: open all files in parallel
+
+step3:
+    - read line by line [only 1 line is read in memory from each file]
+    - get min id from 1st line of all files -> current_id, file_name
+    - for each other file if next line has same id as current_id get next value
+    - write value with latest date into result file
+
+repeat step 3 until reached end of all files
